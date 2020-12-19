@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+
+.card{
+    min-width: 21vw;
+    height: 30vh;
+    margin: 40px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+                0 3px 1px -2px rgba(0,0,0,.12), 
+                0 1px 5px 0 rgba(0,0,0,.2);
+    border: none;
+    border-radius: 20px 20px 20px 20px;
+
+    background-color: #ffffff;
+    border-color: #ffffff;
+    position: relative;
+   
+}
+
+
+
+.cityName{
+    margin-top: 1vh;
+    font-weight: bold;
+
+}
+
+.cardTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.currentWeather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.data{
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+}
+
+.weatherIcon{
+    height: 1.4em;
+    color: rgb(114, 113, 113);
+    margin-right: 3px;
+}
+
+.dailyWeather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.dailyWeatherBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.daileWeatherTitle{
+    height: 2vh;
+}
+
+.btn{
+    height: 0px;
+    position: absolute;
+    top: 0.7vh;
+    right: 0.4vw;
+}
+.btnClose{
+    border-radius: 50%;
+    border: none;
+    height: 2rem;
+    background-color: rgba(148, 142, 142, 0.767);
+    color: white;
+  
+
+}
+
+.btnClose:focus{
+    outline: none;
+}
+
+.btnClose:hover{
+    cursor: pointer;
+    background-color:  rgb(158, 150, 150)
+}
