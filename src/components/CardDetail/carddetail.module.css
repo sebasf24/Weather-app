@@ -1,6 +1,6 @@
 .card{
-    max-width: 4.5vw;
-    height: 17vh;
+    width: 90%;
+    height: 100%;
     margin: 5px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
                 0 3px 1px -2px rgba(0,0,0,.12), 
@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
 }
 
 .title{
@@ -35,4 +36,5 @@
     margin-right: 3px;
     margin-top: 2px;
 }
+
 

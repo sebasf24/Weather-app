@@ -1,16 +1,35 @@
 .container{
-    height: 90%;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-self: center;
     justify-content: center;
-    align-items: center;
+
+
 }
 
 .cardContainer{
     height: 100%;
-    width: 55%;
+    width: 73%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  
+    
+    
 }
+
+ @media (min-width: 0px) {
+    .cardContainer{
+        width:  95%;
+        
+    }
+
+  }
+  @media (min-width: 1400px) {
+    .cardContainer{
+        width:  73%;
+        
+    }
+  }
+
+ 

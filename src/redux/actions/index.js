@@ -1,14 +1,15 @@
 import axios from 'axios';
-import {ADD_CITY,DELETE_CITY} from '../constants/constants'
+import {ADD_CITY,DELETE_CITY, CLOSE_WARNING,FAILED_REQ,LOADING} from '../constants/constants'
 
 export function searchCity(city){
 
     const apiKey = '39c445c6e6887be90682a3d469114d07';
     return function (dispatch) {
+      dispatch({type:LOADING})
         axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=sp&appid=${apiKey}&units=metric`)
         .then(response=>{
             let data=response.data;
-            console.log(data);
+            //console.log(data);
             let cityWeather={};
             if(data.main !== undefined){
               
@@ -39,29 +40,25 @@ export function searchCity(city){
                 cityWeather,
                 details
               }
+              
               dispatch({type: ADD_CITY, payload: cityObj})
+              dispatch({type:LOADING})
             }
             )
             
         })
         .catch(error=>{
-            alert("Ciudad no encontrada")
+            dispatch({type:LOADING})
+            return dispatch({type:FAILED_REQ})
         })
     }
 
 }
-/* 
-export function getDetails(latitud,longitud) {
 
-  return function (dispatch) {
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitud}&lon=${longitud}&lang=sp&exclude=minutely&appid=0942993d27025a20ba51ad6d7cf09141&units=metric`;
-    axios.get(url)
-    .then(response=> {
-      dispatch({type: GET_DETAILS,payload: response.data})
-    }
-      )
-  }
-} */
+export function closeWarningModal(){
+  return {type: CLOSE_WARNING}
+}
+
 
 
 export function deleteCity(city) {
