@@ -32,8 +32,8 @@ export function searchCity(city){
                 };
               } 
 
-          const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityWeather.latitud}&lon=${cityWeather.longitud}&lang=sp&exclude=minutely&appid=0942993d27025a20ba51ad6d7cf09141&units=metric`;
-          axios.get(url)
+          
+          axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityWeather.latitud}&lon=${cityWeather.longitud}&lang=sp&exclude=minutely&appid=${apiKey}&units=metric`)
             .then(responseDetails => {
               let details = responseDetails.data;
               let cityObj ={
