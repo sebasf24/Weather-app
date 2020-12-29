@@ -55,9 +55,6 @@
 
 
 .btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 31px;
     border: 1px groove;
     background-color: lightblue;
@@ -77,8 +74,9 @@
 }
 
 .searchIcon{
-    width: 2vw;
-    height: 3vh;
+    width: 3em;
+    height: 2em;
+    
 }
 
 

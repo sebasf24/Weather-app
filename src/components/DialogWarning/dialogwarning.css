@@ -108,10 +108,12 @@
 
     .warningBox{
       width: 30vw;
+      
     }
 
     .exclamation{
       width: 5vw;
+      height: 1em;
     }
     .exclamationIcon{
       width: 5vw;
@@ -136,10 +138,10 @@
       width: 15vw;
     }
     .exclamation{
-      width: 2.5vw;
+      width: 1em;
     }
     .exclamationIcon{
-      width: 2vw;
+      width: 0.9em;
     }
 
     h1{
