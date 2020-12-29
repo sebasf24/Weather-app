@@ -6,7 +6,7 @@ export function searchCity(city){
     const apiKey = '39c445c6e6887be90682a3d469114d07';
     return function (dispatch) {
       dispatch({type:LOADING})
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=sp&appid=${apiKey}&units=metric`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=sp&appid=${apiKey}&units=metric`)
         .then(response=>{
             let data=response.data;
             //console.log(data);
